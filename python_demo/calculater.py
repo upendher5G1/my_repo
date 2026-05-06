@@ -1,13 +1,21 @@
-a=float(input("enter a :"))
-b=float(input("enter b :"))
-choice=input("enter 1 for add,2 for sub,3 for mul,4 for div,5 for exit")
-if choice=="1":
-    print(a+b)
-elif choice=="2":
-    print(a-b)
-elif choice=="3":
-    print(a*b)
-elif choice=="4":
-    print(a/b)
-else:
-    print("invalid choice")
+print("....SIMPLE CALCULATOR....")
+while True:
+    a=float(input("enter a :"))
+    b=float(input("enter b :"))
+    choice=input("1)addition(+)\n2)subtract(-)\n3)multpication(*)\n4)divison(/)\n5)exit\nenter operations:")
+    if choice=="+":
+        print("result:",a+b)
+    elif choice=="-":
+        print("result:",a-b)
+    elif choice=="*":
+        print("result:",a*b)
+    elif choice=="/":
+        if b!=0:
+            print("result:",a/b)
+        else:
+            print("cannot divide by zero")
+    elif choice=="5":
+        print("exit calculator....")
+        break
+    else:
+        print("invalid choice")
