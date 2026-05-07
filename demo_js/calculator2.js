@@ -1,9 +1,10 @@
-const prompt=require("prompt-sync")();
-while(true){
-    console.log("....Simple Calculator....");
-    console.log("Enter 'x' For Exit Calculator")
-    let a = parseFloat(prompt("Enter first number:"));
-    let b = parseFloat(prompt("Enter second number:"));
+function calculator(){
+    const prompt=require("prompt-sync")();
+    while(true){
+        console.log("....Simple Calculator....");
+        console.log("Enter 'x' For Exit Calculator")
+        let a = parseFloat(prompt("Enter first number:"));
+        let b = parseFloat(prompt("Enter second number:"));
     let op = prompt("Enter operator (+, -, *, /):");
     if (op==='x'){
         console.log("Calculator Closed...")
@@ -29,4 +30,6 @@ while(true){
             console.log("invalid choice");
         break;
         }
+    }
 }
+calculator();
