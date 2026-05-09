@@ -1,24 +1,24 @@
 class BankAccount:
     print("_____ABCD  Bank Of India_____")#class variable
-    def __init__(self,name,acc_no,ifsc_code,balence=0):
+    def __init__(self,name,acc_no,ifsc_code,balance=0):
         self.name=name#instance variable
         self.acc_no= acc_no
         self.ifsc_code=ifsc_code
-        self.balence=balence
+        self.balance=balance
     def deposit(self,amount):
         if amount>0:
-            self.balence+=amount
-            return f'deposited {amount} sucessfully\n current balence: {self.balence}'
+            self.balance+=amount
+            return f'deposited {amount} sucessfully\n current balance: {self.balance}'
         else:
             return "deposited unsucessfully"
     def withdraw(self,amount):
-        if amount<= self.balence:
-            self.balence-=amount
-            return f'withdaw {amount} sucessful\n current balence: {self.balence}'
+        if amount<= self.balance:
+            self.balance-=amount
+            return f'withdaw {amount} sucessfully\n current balance: {self.balance}'
         else:
              return "withdraw unsucessfully"
-    def show_balence(self):
-        return f'account holder: {self.name}\naccount number: {self.acc_no}\nifsc code: {self.ifsc_code}\nbalence: {self.balence}'
+    def show_balance(self):
+        return f'account holder: {self.name}\naccount number: {self.acc_no}\nifsc code: {self.ifsc_code}\nbalance: {self.balance}'
 bank=BankAccount("upendher","123456789","0987654321",100)    #object
 while True:
     pin=1234
@@ -38,7 +38,7 @@ while True:
         print(bank.withdraw(amount))
         print("withdraw sucessfull")
     elif choice=="3":
-        print("your current balance is",bank.show_balence())
+        print("your current balance is",bank.show_balance())
     elif choice=="4":
         break
     else:
